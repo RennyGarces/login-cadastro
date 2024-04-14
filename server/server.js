@@ -27,4 +27,7 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "../build/index.html"));
 });
 
-app.listen(3005, () => console.log("porto 3005"));
+/* app.listen(3005, () => console.log("porto 3005")); */
+app.listen(process.env.PORT || 3005, () =>
+  console.log(`Server running on port ${process.env.PORT || 3005}`)
+);
